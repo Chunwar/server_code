@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Server code</title>
+		<style>
+			#heading {
+				text-align: left;
+				color: #008B8B;
+				font-size: 50px;
+			}
+
+			.system {
+				background: none;
+				border: none;
+				font-size: 30px;
+				color: #008B8B;
+				text-decoration: underline;
+
+			}
+
+			div {
+				font-size: 30px;
+				color: #D3D3D3;
+				display: none;
+			}
+
+			body {
+				font-family: sans-serif;
+				flex: wrap;
+			}
+		</style>
+		<script>
+			const width = window.innerWidth
+			function para(mode) {
+				document.querySelectorAll('div').forEach(div => {
+					div.style.display = 'none';
+				})
+
+				document.querySelector(`#${mode}`).style.display = 'block';
+			}
+
+			document.addEventListener('DOMContentLoaded', function() {
+				document.querySelectorAll('button').forEach(button => {
+					button.onclick = function() {
+						para(this.dataset.mode);
+					}
+				});
+				document.querySelector('#homepage').style.display = 'block'
+			});
+		</script>
+	</head>
+	<body>
+		<h1 id="heading">Website Creators</h1>
+
+
+		<p align="right">
+			<button class="system" id="home" data-mode="homepage">HOME</button>
+
+			<button class="system" data-mode="aboutpage">ABOUT</button>
+
+			<button class="system" data-mode="helppage">HELP</button>
+
+			<button class="system" data-mode="examplecodepage">EXAMPLE CODE</button>
+		</p>
+		<br><br>
+		<div id="homepage">Hello and welcome!. This website is created for people who do not want to waste their time or do not know web programming and want to make a website. We create websites your can call us if you want and then you say to us to create a website for you(phone number included at the end). We can create many types of websites we will tell you about in the about tab above. But we only give you code not the the server and domain. If you want we can do that but you need to pay us more for that. If you can purcahse a domain then we will give you the code and you can put it there. But if you dont want to that you can pay us more for that and will give you the code and the server domain. This is a small example code, for more complex code go to example code tab.<br>
+		<img src="/images/capture.png" height="700" width=width><br>
+		By this example code, you can understand we can use java script, css(animation also) and html. This is our number +91 9997160704.
+		</div>
+
+		<div id="aboutpage">Welcome! to the about page you have clicked becasue you wanna know more about us. So from the home page you can understand that we create websites for you and you need to pay us and we have also described the phone numbers below in the home page. Now if you wanna like create a verybasic and simple website. we will do that for you and like we all that whoever wants to have a own website need to have its own format or writing in the code. So like you wil definetly nee to have that and we will not take extra chraged for that. Like you talk to us and want us to create a website for you and you want your oown format you can send that on our gmail gamegunwar@gmail.com.</div>
+		<div id="helppage">s</div>
+		<div id="examplecodepage">lol</div>
+	</body>
+</html>
